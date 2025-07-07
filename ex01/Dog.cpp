@@ -6,7 +6,7 @@
 /*   By: afpachec <afpachec@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 17:12:40 by afpachec          #+#    #+#             */
-/*   Updated: 2025/07/07 16:14:58 by afpachec         ###   ########.fr       */
+/*   Updated: 2025/07/07 16:35:24 by afpachec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Dog::Dog(void): Animal("dog") {
 Dog	&Dog::operator=(const Dog &rhs)
 {
 	this->_type = rhs._type;
+	delete _brain;
 	if (rhs._brain)
 		_brain = new Brain(*rhs._brain);
 	std::cout << DOG_LOG_PREFIX << " Assignment Operator Called" << std::endl;
