@@ -6,7 +6,7 @@
 /*   By: afpachec <afpachec@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 17:21:20 by afpachec          #+#    #+#             */
-/*   Updated: 2025/07/07 16:09:53 by afpachec         ###   ########.fr       */
+/*   Updated: 2025/07/07 13:35:46 by afpachec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ int	main(void)
 	animal1.makeSound();
 	animal2.makeSound();
 	animal3.makeSound();
-	Dog	dog1;
-	Dog	dog2(dog1);
+	Dog		dog1;
+	Dog		dog2(dog1);
 	dog1.makeSound();
 	dog2.makeSound();
-	Cat	cat1;
-	Cat	cat2(cat1);
+	Cat		cat1;
+	Cat		cat2(cat1);
 	cat1.makeSound();
 	cat2.makeSound();
 	const WrongAnimal* wrongAnimal = new WrongAnimal();

@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afpachec <afpachec@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 17:23:44 by afpachec          #+#    #+#             */
-/*   Updated: 2025/07/07 16:07:06 by afpachec         ###   ########.fr       */
+/*   Updated: 2025/07/07 15:52:50 by afpachec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 # include <string>
 # include <iostream>
 
-# define ANIMAL_LOG_PREFIX "\033[1;34m[ANIMAL]\033[0m"
+# define BRAIN_LOG_PREFIX "\033[1;36m[BRAIN]\033[0m"
 
-class Animal {
-	protected:
-		std::string	_type;
+class Brain {
+	private:
+		std::string		_ideas[100];
 	public:
-						Animal(void);
-						Animal(std::string type);
-						Animal(const Animal &other);
-		virtual			~Animal(void);
-		Animal			&operator=(const Animal &other);
-		virtual void	makeSound(void) const;
-		std::string		getType(void) const;
+						Brain(void);
+						Brain(const Brain &other);
+						~Brain(void);
+		Brain			&operator=(const Brain &other);
+		std::string		getIdea(int index) const;
+		void			setIdea(int index, std::string idea);
 };
 
 #endif
