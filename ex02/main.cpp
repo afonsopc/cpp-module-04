@@ -6,7 +6,7 @@
 /*   By: afpachec <afpachec@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 17:21:20 by afpachec          #+#    #+#             */
-/*   Updated: 2025/07/07 16:23:42 by afpachec         ###   ########.fr       */
+/*   Updated: 2025/07/07 16:30:12 by afpachec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,16 @@ int	main(void)
 	Cat		cat2(cat1);
 	cat1.makeSound();
 	cat2.makeSound();
+	Dog basic;
+	{
+		Dog tmp = basic;
+		std::cout << "tmp going out of scope..." << std::endl;
+	}
+	Cat basicCat;
+	{
+		Cat tmpCat = basicCat;
+		std::cout << "tmpCat going out of scope..." << std::endl;
+	}
 	const WrongAnimal* wrongAnimal = new WrongAnimal();
 	const WrongAnimal* wrongCat = new WrongCat();
 	std::cout << wrongCat->getType() << " " << std::endl;

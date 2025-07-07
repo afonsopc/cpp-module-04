@@ -6,7 +6,7 @@
 /*   By: afpachec <afpachec@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 17:23:44 by afpachec          #+#    #+#             */
-/*   Updated: 2025/07/07 16:07:16 by afpachec         ###   ########.fr       */
+/*   Updated: 2025/07/07 16:28:02 by afpachec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class WrongAnimal {
 						WrongAnimal(const WrongAnimal &other);
 		virtual			~WrongAnimal(void);
 		WrongAnimal			&operator=(const WrongAnimal &other);
-		virtual void	makeSound(void) const;
+		void			makeSound(void) const;
 		std::string		getType(void) const;
 };
 
